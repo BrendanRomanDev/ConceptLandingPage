@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-<link rel="stylesheet" href="node_modules\font-awesome\css\font-awesome.min.css" />
-<link rel="stylesheet" href="node_modules\bootstrap-social\bootstrap-social.css" />
-<link rel="stylesheet" href="styles.css">
+<meta charset="utf-8" />
+<title>NuCamp: A Better Way To Camp</title>
 
 <head>
-    <meta charset="utf-8" />
-    <title>NuCamp: A Better Way To Camp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules\font-awesome\css\font-awesome.min.css" />
+    <link rel="stylesheet" href="node_modules\bootstrap-social\bootstrap-social.css" />
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -25,9 +25,9 @@
                     <h2>a better way to camp</h2>
                 </div>
                 <div class="col-md-4 col-xl-2 mt-4">
-                    <a href="#reserveForm"><button class="btn btn-info btn-lg">Reserve Campsite</button></a>
+                    <a href="#reserveForm"><button class="btn btn-info btn-lg" data-toggle="tooltip"
+                            title="Or call us at 1-206-555-1234" data-placement="bottom">Reserve Campsite</button></a>
                 </div>
-
             </div>
         </div>
     </header>
@@ -41,16 +41,60 @@
                 <ul class="navbar-nav">
                     <li class="nav-item active"><a class="nav-link" href="index.html"><i class="fa fa-home fa-lg"></i>
                             Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="aboutus.html"><i class="fa fa-info fa-lg"></i>
-                            About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html"><i class="fa fa-info fa-lg"></i> About</a></li>
                     <li class="nav-item"><a class="nav-link" href="sites.html"><i class="fa fa-list fa-lg"></i>
                             Sites</a></li>
                     <li class="nav-item"><a class="nav-link" href="contactus.html"><i
                                 class="fa fa-address-card fa-lg"></i> Contact</a></li>
                 </ul>
+                <span class="navbar-text ml-auto">
+                    <a role="button" data-toggle="modal" data-target="#loginModal">
+                        <i class="fa fa-sign-in fa-lg"></i> Login</a>
+                </span>
             </div>
         </div>
     </nav>
+
+    <div role="dialog" id="loginModal" class="modal fade">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Login</h3>
+                    <button class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-12">
+                                    <label class="sr-only" for="loginEmail">Email</label>
+                                    <input type="email" class="form-control form-control-sm" id="loginEmail"
+                                        placeholder="Enter your email">
+                                </div>
+                                <div class="form-group col-12">
+                                    <label class="sr-only" for="loginPassword">Password</label>
+                                    <input type="password" class="form-control form-control-sm"
+                                        placeholder="Enter your password" id="loginPassword">
+                                </div>
+                                <div class="col">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="rememberMeBox">
+                                        <label for="rememberMeBox"> Remember Me</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <button type="button" class="btn btn-secondary btn-sm ml-auto"
+                                    data-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-primary btn-sm ml-1">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
 
 
     <div class="container">
@@ -133,7 +177,6 @@
                                         </select>
                                     </div>
                                 </div>
-
                                 <div class="row form-group align-items-center">
                                     <label for="date" class="col-sm-6 col-form-label">Date</label>
                                     <div class="col-sm-6 ">
@@ -147,33 +190,12 @@
                                         <button type="submit" class="btn btn-primary">Reserve</button>
                                     </div>
                                 </div>
-
-
-
-
                             </form>
-
-
                         </div>
-
-
                 </div>
-
-
-
-
             </div>
-
-
-
-
-
             </form>
-
         </div>
-
-
-
     </div>
 
     <footer class="main-footer">
@@ -210,6 +232,12 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
 </body>
 
 </html>
