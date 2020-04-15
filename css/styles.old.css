@@ -278,10 +278,31 @@ a {
     margin: .8rem 20px;
 }
 
+<<<<<<< HEAD:styles.css
 .copyright-roman {
     text-align: center;
     color: #fff;
     font-size: .8rem;
     margin: 2rem auto 50px;
-
+=======
+.tab-content {
+    border: solid 1px #DDD;
+    border-top: none;
+    padding: 10px;
 }
+
+.carousel-caption {
+        background-color: rgba(0,0,0,0.5);
+        border-radius: 10px;
+}
+
+.carousel {
+    border: solid #5637dd;
+}
+>>>>>>> 5e404957fa5ca2a7b414a2c96d9f6086f953e70f:css/styles.old.css
+
+.carouselBtnDiv {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    }
