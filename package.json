@@ -20,6 +20,7 @@
   "license": "ISC",
   "devDependencies": {
     "copyfiles": "^2.3.0",
+    "font-awesome": "^4.7.0",
     "gh-pages": "^3.1.0",
     "imagemin-cli": "^3.0.0",
     "lite-server": "^2.3.0",
@@ -33,7 +34,6 @@
     "@fortawesome/fontawesome-free": "^5.12.1",
     "bootstrap": "^4.4.1",
     "bootstrap-social": "^5.1.1",
-    "font-awesome": "^4.7.0",
     "jquery": "^3.5.1",
     "popper.js": "^1.12.9"
   }
